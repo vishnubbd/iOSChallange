@@ -28,6 +28,7 @@ extension UIViewController {
             }
             self.present(alertController, animated: true, completion: nil)
         }
+//MARK: - extension for navigation bar color
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

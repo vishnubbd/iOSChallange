@@ -27,7 +27,7 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
     override func viewWillAppear(_ animated: Bool) {
          navigationItem.title = showDetails?.name
         let navBarColor = navigationController!.navigationBar
-        navBarColor.barTintColor = UIColor(red:  255/255.0, green: 0/255.0, blue: 0/255.0, alpha: 100.0/100.0)
+      navBarColor.barTintColor = self.hexStringToUIColor(hex: "5AFFF5")
 
     }
     func addNavigationRightButton(){
