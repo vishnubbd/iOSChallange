@@ -8,22 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		182D97C42240651600A8CC8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D97C32240651500A8CC8C /* AppDelegate.swift */; };
-		182D97C62240651600A8CC8C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D97C52240651600A8CC8C /* FirstViewController.swift */; };
-		182D97C82240651600A8CC8C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D97C72240651600A8CC8C /* SecondViewController.swift */; };
+		182D97C62240651600A8CC8C /* ShowsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D97C52240651600A8CC8C /* ShowsListViewController.swift */; };
+		182D97C82240651600A8CC8C /* FavouriteShowsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D97C72240651600A8CC8C /* FavouriteShowsListViewController.swift */; };
 		182D97CB2240651600A8CC8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D97C92240651600A8CC8C /* Main.storyboard */; };
 		182D97CD2240651800A8CC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182D97CC2240651800A8CC8C /* Assets.xcassets */; };
 		182D97D02240651800A8CC8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D97CE2240651800A8CC8C /* LaunchScreen.storyboard */; };
+		183100DD2241A50C00C714FE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183100DC2241A50C00C714FE /* NetworkService.swift */; };
+		18CB62A522468463009EB01E /* ShowsDataModelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62A422468463009EB01E /* ShowsDataModelMap.swift */; };
+		18CB62A72247DF58009EB01E /* SS_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CB62A62247DF58009EB01E /* SS_Icon.png */; };
+		18CB62A92247E40A009EB01E /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62A82247E40A009EB01E /* ShowDetailsViewController.swift */; };
+		18CB62CD22480C9A009EB01E /* iOSChallange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62CB22480C9A009EB01E /* iOSChallange.xcdatamodeld */; };
+		18CB62E0224929D2009EB01E /* DataForFavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */; };
+		18CB62E222493490009EB01E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E122493490009EB01E /* CoreDataManager.swift */; };
+		18CB62E422494896009EB01E /* ShowListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E322494895009EB01E /* ShowListObject.swift */; };
+		18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */; };
+		18CB630E2249C5B7009EB01E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB630D2249C5B7009EB01E /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182D97C02240651500A8CC8C /* iOSChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182D97C32240651500A8CC8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		182D97C52240651600A8CC8C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		182D97C72240651600A8CC8C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		182D97C52240651600A8CC8C /* ShowsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsListViewController.swift; sourceTree = "<group>"; };
+		182D97C72240651600A8CC8C /* FavouriteShowsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteShowsListViewController.swift; sourceTree = "<group>"; };
 		182D97CA2240651600A8CC8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182D97CC2240651800A8CC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182D97CF2240651800A8CC8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182D97D12240651800A8CC8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183100DC2241A50C00C714FE /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		18CB62A422468463009EB01E /* ShowsDataModelMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsDataModelMap.swift; sourceTree = "<group>"; };
+		18CB62A62247DF58009EB01E /* SS_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS_Icon.png; sourceTree = "<group>"; };
+		18CB62A82247E40A009EB01E /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
+		18CB62CC22480C9A009EB01E /* iOSChallange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSChallange.xcdatamodel; sourceTree = "<group>"; };
+		18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForFavoriteListViewController.swift; sourceTree = "<group>"; };
+		18CB62E122493490009EB01E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		18CB62E322494895009EB01E /* ShowListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListObject.swift; sourceTree = "<group>"; };
+		18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListAlertViewViewController.swift; sourceTree = "<group>"; };
+		18CB630D2249C5B7009EB01E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,81 @@
 		182D97C22240651500A8CC8C /* iOSChallange */ = {
 			isa = PBXGroup;
 			children = (
-				182D97C32240651500A8CC8C /* AppDelegate.swift */,
-				182D97C52240651600A8CC8C /* FirstViewController.swift */,
-				182D97C72240651600A8CC8C /* SecondViewController.swift */,
-				182D97C92240651600A8CC8C /* Main.storyboard */,
+				183100D92241A3CD00C714FE /* Network */,
+				183100D82241A35B00C714FE /* Global */,
+				183100D72241A34D00C714FE /* Model */,
+				18CB63102249C775009EB01E /* BusinessLogic */,
+				183100D62241A32A00C714FE /* View */,
+				183100D42241A1F300C714FE /* Router */,
+				18CB630F2249C654009EB01E /* Controller */,
 				182D97CC2240651800A8CC8C /* Assets.xcassets */,
 				182D97CE2240651800A8CC8C /* LaunchScreen.storyboard */,
 				182D97D12240651800A8CC8C /* Info.plist */,
 			);
 			path = iOSChallange;
+			sourceTree = "<group>";
+		};
+		183100D42241A1F300C714FE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				182D97C32240651500A8CC8C /* AppDelegate.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		183100D62241A32A00C714FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182D97C92240651600A8CC8C /* Main.storyboard */,
+				18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		183100D72241A34D00C714FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18CB62CB22480C9A009EB01E /* iOSChallange.xcdatamodeld */,
+				18CB62A422468463009EB01E /* ShowsDataModelMap.swift */,
+				18CB62E122493490009EB01E /* CoreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		183100D82241A35B00C714FE /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				18CB62A62247DF58009EB01E /* SS_Icon.png */,
+				18CB630D2249C5B7009EB01E /* AppConstants.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		183100D92241A3CD00C714FE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				183100DC2241A50C00C714FE /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		18CB630F2249C654009EB01E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182D97C52240651600A8CC8C /* ShowsListViewController.swift */,
+				18CB62A82247E40A009EB01E /* ShowDetailsViewController.swift */,
+				182D97C72240651600A8CC8C /* FavouriteShowsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18CB63102249C775009EB01E /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				18CB62E322494895009EB01E /* ShowListObject.swift */,
+				18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */,
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CB62A72247DF58009EB01E /* SS_Icon.png in Resources */,
 				182D97D02240651800A8CC8C /* LaunchScreen.storyboard in Resources */,
 				182D97CD2240651800A8CC8C /* Assets.xcassets in Resources */,
 				182D97CB2240651600A8CC8C /* Main.storyboard in Resources */,
@@ -138,9 +225,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182D97C82240651600A8CC8C /* SecondViewController.swift in Sources */,
+				18CB62E0224929D2009EB01E /* DataForFavoriteListViewController.swift in Sources */,
+				18CB62E422494896009EB01E /* ShowListObject.swift in Sources */,
+				18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */,
+				182D97C82240651600A8CC8C /* FavouriteShowsListViewController.swift in Sources */,
+				18CB62CD22480C9A009EB01E /* iOSChallange.xcdatamodeld in Sources */,
 				182D97C42240651600A8CC8C /* AppDelegate.swift in Sources */,
-				182D97C62240651600A8CC8C /* FirstViewController.swift in Sources */,
+				18CB62A522468463009EB01E /* ShowsDataModelMap.swift in Sources */,
+				183100DD2241A50C00C714FE /* NetworkService.swift in Sources */,
+				18CB62A92247E40A009EB01E /* ShowDetailsViewController.swift in Sources */,
+				18CB62E222493490009EB01E /* CoreDataManager.swift in Sources */,
+				18CB630E2249C5B7009EB01E /* AppConstants.swift in Sources */,
+				182D97C62240651600A8CC8C /* ShowsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +434,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18CB62CB22480C9A009EB01E /* iOSChallange.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18CB62CC22480C9A009EB01E /* iOSChallange.xcdatamodel */,
+			);
+			currentVersion = 18CB62CC22480C9A009EB01E /* iOSChallange.xcdatamodel */;
+			path = iOSChallange.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 182D97B82240651500A8CC8C /* Project object */;
 }
