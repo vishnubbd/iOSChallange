@@ -23,6 +23,8 @@
 		18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */; };
 		18CB630E2249C5B7009EB01E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB630D2249C5B7009EB01E /* AppConstants.swift */; };
 		18CB6316224A77F6009EB01E /* DataOperationsFromLocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB6315224A77F6009EB01E /* DataOperationsFromLocalDB.swift */; };
+		18CB631D224A8808009EB01E /* ShowDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB631B224A8808009EB01E /* ShowDetailTableViewCell.swift */; };
+		18CB631E224A8808009EB01E /* ShowDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CB631C224A8808009EB01E /* ShowDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListAlertViewViewController.swift; sourceTree = "<group>"; };
 		18CB630D2249C5B7009EB01E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		18CB6315224A77F6009EB01E /* DataOperationsFromLocalDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataOperationsFromLocalDB.swift; sourceTree = "<group>"; };
+		18CB631B224A8808009EB01E /* ShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18CB631C224A8808009EB01E /* ShowDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				182D97C92240651600A8CC8C /* Main.storyboard */,
 				18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */,
+				18CB631B224A8808009EB01E /* ShowDetailTableViewCell.swift */,
+				18CB631C224A8808009EB01E /* ShowDetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				18CB62A72247DF58009EB01E /* SS_Icon.png in Resources */,
 				182D97D02240651800A8CC8C /* LaunchScreen.storyboard in Resources */,
 				182D97CD2240651800A8CC8C /* Assets.xcassets in Resources */,
+				18CB631E224A8808009EB01E /* ShowDetailTableViewCell.xib in Resources */,
 				182D97CB2240651600A8CC8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CB631D224A8808009EB01E /* ShowDetailTableViewCell.swift in Sources */,
 				18CB62E422494896009EB01E /* ShowListObject.swift in Sources */,
 				18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */,
 				182D97C82240651600A8CC8C /* FavouriteShowsListViewController.swift in Sources */,

@@ -27,6 +27,7 @@ struct GEN_STRINGS
     static let RES_ERROR = "Response Error"
     static let DELETE_BTN = "Delete"
     static let FAVOURITE_BTN = "Favourite"
+     static let CELL_LABEL = "LabelCell"
     static let SHOW_FAV_SEGUE = "ShowFavouriteSegue"
     static let SHOW_DETAIL_SEGUE = "ShowCounterSegue"
 }

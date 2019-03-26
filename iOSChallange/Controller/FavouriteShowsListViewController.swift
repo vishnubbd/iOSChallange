@@ -19,10 +19,11 @@ class FavouriteShowsListViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         //        NetworkingService.shared.newList();
         // Do any additional setup after loading the view, typically from a nib.
-        
+          tableView.register(UINib(nibName: "ShowDetailTableViewCell", bundle: nil), forCellReuseIdentifier: GEN_STRINGS.CELL_LABEL)
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         favoriteList = ShowListObject.sharedManager.getShowFavouriteList()
         self.tableView.reloadData()
     }
@@ -42,14 +43,16 @@ extension FavouriteShowsListViewController: UITableViewDataSource {
         
         return GEN_STRINGS.FAV_LIST
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 57.5
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: GEN_STRINGS.CELL_LABEL, for: indexPath) as! ShowDetailTableViewCell
         
         let selectedshowDetail = self.favoriteList[indexPath.row]
-        cell.textLabel?.text = selectedshowDetail.name
+        cell.showNameLabel?.text = selectedshowDetail.name
         // Check Image caching, If image has not cached. Add code for chacing the same image. Object name is using for cachching key
-        cell.imageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
+        cell.showImageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
         if let cachedImage = imageCache.object(forKey: NSString(string: (selectedshowDetail.name ?? ""))) {
             cell.imageView?.image = cachedImage
         }
@@ -67,7 +70,7 @@ extension FavouriteShowsListViewController: UITableViewDataSource {
                         if let image = UIImage(data: data) {
                             DispatchQueue.main.async {
                                 self.imageCache.setObject(image, forKey: NSString(string: (selectedshowDetail.name)!))
-                                cell.imageView?.image = image
+                                cell.showImageView?.image = image
                             }
                         }
                     }

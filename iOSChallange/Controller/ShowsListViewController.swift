@@ -17,7 +17,9 @@ class ShowsListViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+           tableView.register(UINib(nibName: "ShowDetailTableViewCell", bundle: nil), forCellReuseIdentifier: GEN_STRINGS.CELL_LABEL)
         self.loadData()
+     
     }
     
  //MARK: - Methods for Getting the Show ist data from API
@@ -68,17 +70,20 @@ extension ShowsListViewController: UITableViewDataSource {
         
         return GEN_STRINGS.SHOW_LIST
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 57.5
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: GEN_STRINGS.CELL_LABEL, for: indexPath) as! ShowDetailTableViewCell
         
         let selectedshowDetail = self.showList[indexPath.row]
-        cell.textLabel?.text = selectedshowDetail.name
-        cell.imageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
+        cell.showNameLabel?.text = selectedshowDetail.name
+        cell.showImageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
         
         // Check Image caching, If image has not cached. Add code for chacing the same image. Object name is using for cachching key
         if let cachedImage = imageCache.object(forKey: NSString(string: (selectedshowDetail.name ?? ""))) {
-            cell.imageView?.image = cachedImage
+            cell.showImageView?.image = cachedImage
         }
         else
         {
@@ -93,7 +98,7 @@ extension ShowsListViewController: UITableViewDataSource {
                         if let image = UIImage(data: data) {
                             DispatchQueue.main.async {
                                 self.imageCache.setObject(image, forKey: NSString(string: (selectedshowDetail.name)!))
-                                cell.imageView?.image = image
+                                cell.showImageView?.image = image
                             }
                         }
                     }
