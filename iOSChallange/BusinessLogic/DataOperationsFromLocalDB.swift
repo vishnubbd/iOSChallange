@@ -1,24 +1,22 @@
 //
-//  DataForFavoriteListViewController.swift
+//  DataOperationsFromLocalDB.swift
 //  iOSChallange
 //
-//  Created by VishnuKant Aggarwal - CONTRACT on 3/25/19.
+//  Created by VishnuKant Aggarwal - CONTRACT on 3/26/19.
 //  Copyright © 2019 VishnuKant Aggarwal. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class DataForFavoriteListViewController: UIViewController {
-    static let shared = DataForFavoriteListViewController()
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+class DataOperationsFromLocalDB: NSObject {
+    static let shared = DataOperationsFromLocalDB()
     let context = CoreDataManager.sharedManager.persistentContainer.viewContext
     var addFavoriteItem:MapShowListInfo?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+/****************************************************************/
+//   Class contains the Opertaion methods for local database
+/***************************************************************/
+//MARK: - Add data for favorite show in to local DB
     func addDataIntoDb(addFavoriteItem:MapShowListInfo?){
         if (checkItemInDB(favoriteShowId: (addFavoriteItem?.id)!)){
             let entity = NSEntityDescription.entity(forEntityName: GEN_STRINGS.ENTITY_NAME_FAVLIST, in: context)
@@ -36,11 +34,10 @@ class DataForFavoriteListViewController: UIViewController {
             print("Failed saving")
         }
     }
+//MARK: - Get data for favorite show from local DB
     func getFavouriteListFromDB()->[Int]{
-        //         let context = self.appDelegate.persistentContainer.viewContext
         var favoriteListIds:[Int] = []
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: GEN_STRINGS.ENTITY_NAME_FAVLIST)
-        //        request.predicate = NSPredicate(format: "id = %d", favoriteShowId)
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
@@ -54,18 +51,19 @@ class DataForFavoriteListViewController: UIViewController {
         }
         return favoriteListIds
     }
+//MARK: - Check a show item in DB, whether it exist or not
     func checkItemInDB(favoriteShowId:Int)->Bool{
-        //         let context = self.appDelegate.persistentContainer.viewContext
+
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: GEN_STRINGS.ENTITY_NAME_FAVLIST)
         request.predicate = NSPredicate(format: "id = %d", favoriteShowId)
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
-//            for data in result as! [NSManagedObject] {
-//                print(data.value(forKey: "name") as! String)
-//            }
+            //            for data in result as! [NSManagedObject] {
+            //                print(data.value(forKey: "name") as! String)
+            //            }
             if  result.count > 0{
-            return false
+                return false
             }
         } catch {
             
@@ -73,6 +71,7 @@ class DataForFavoriteListViewController: UIViewController {
         }
         return true
     }
+//MARK: - Delete a record from DB, If favorite item exist in DB
     func deleteFavouriteItem(favoriteShowId:Int){
         
         let requestDel = NSFetchRequest<NSFetchRequestResult>(entityName: GEN_STRINGS.ENTITY_NAME_FAVLIST)
@@ -90,7 +89,9 @@ class DataForFavoriteListViewController: UIViewController {
         }
         saveToPersistent(context: context)
     }
-    
+  //***********************************************************/
+   // Call for local class method for adding and removing the favourite item in to DB
+    //*********************************************************/
     func addRemovefavoriteItem(favoriteItem:MapShowListInfo? ){
         if( checkItemInDB(favoriteShowId:(favoriteItem?.id)!)){
             addDataIntoDb(addFavoriteItem: favoriteItem)

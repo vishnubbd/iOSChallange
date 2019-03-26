@@ -11,7 +11,10 @@ import CoreData
 
 class CoreDataManager: NSObject {
     // MARK: - Core Data stack
-    
+   
+/****************************************************************/
+//   Core data manager- Defaut method for peristence.
+/***************************************************************/
     static let sharedManager = CoreDataManager()
    
     private override init() {}

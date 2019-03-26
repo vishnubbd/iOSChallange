@@ -26,13 +26,16 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
     }
 
     func addNavigationRightButton(){
-        if( DataForFavoriteListViewController.shared.checkItemInDB(favoriteShowId: showDetails!.id!)){
+        if( DataOperationsFromLocalDB.shared.checkItemInDB(favoriteShowId: showDetails!.id!)){
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: GEN_STRINGS.FAVOURITE_BTN, style: .plain, target: self, action: #selector(addDeleteFavoriteTapped))
         }else{
             navigationItem.rightBarButtonItem = UIBarButtonItem(title:  GEN_STRINGS.DELETE_BTN, style: .plain, target: self, action: #selector(addDeleteFavoriteTapped))
         }
         
     }
+/****************************************************************/
+//  Add summary
+/***************************************************************/
     func addShowSummary(){
         let htmlString = showDetails!.summary
         let htmlData = NSString(string: htmlString!).data(using: String.Encoding.unicode.rawValue)
@@ -43,6 +46,9 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
         
         showSummary.attributedText = attributedString
     }
+/****************************************************************/
+//  Enable or disable the the Show to WEB url based on imdb value
+/***************************************************************/
     func enableDisableShowLink(){
         if(showDetails?.externals.imdb != nil){
             tvShowButton.isHidden = false
@@ -51,15 +57,18 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
         }
     }
     
-    
+/****************************************************************/
+//  Action on Navigation Right button
+/***************************************************************/
     @objc func addDeleteFavoriteTapped(){
-       DataForFavoriteListViewController.shared.addRemovefavoriteItem(favoriteItem: showDetails!)
+       DataOperationsFromLocalDB.shared.addRemovefavoriteItem(favoriteItem: showDetails!)
         addNavigationRightButton()
         
     }
+//MARK: - Add image in view with Image caching 
     func addImage(){
         showImage.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
-        if let cachedImage = imageMedCache.object(forKey: NSString(string: (showDetails?.name ?? ""))) {
+        if let cachedImage = imageMedCache.object(forKey: NSString(string: ((showDetails?.name)! + "Org"))) {
             showImage.image = cachedImage
         }
         else
@@ -74,7 +83,7 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
                     if let data = try? Data(contentsOf: url!) {
                         if let image = UIImage(data: data) {
                             DispatchQueue.main.async {
-                                self.imageMedCache.setObject(image, forKey: NSString(string: (self.showDetails?.name)!))
+                                self.imageMedCache.setObject(image, forKey: NSString(string: ((self.showDetails?.name)! + "Org")))
                                 self.showImage.image = image
                             }
                         }
@@ -83,7 +92,7 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
             }
         }
     }
-    
+ //MARK: - Open the web url for TV Show
     @IBAction func openLiveShow(_ sender: Any) {
         
         guard let url = URL(string: GEN_STRINGS.LIVE_SHOWURL + (showDetails?.externals.imdb)!) else {

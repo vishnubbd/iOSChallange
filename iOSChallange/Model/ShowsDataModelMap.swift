@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+/****************************************************************/
+//   Structure contains all the parameter for Json Response but all the parameters are not using in application. Uncommented variable are only using in application.
+/***************************************************************/
 //struct Genres: Codable {
 //    var id: Int?
 //    var url: String?

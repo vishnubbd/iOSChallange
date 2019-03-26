@@ -18,11 +18,11 @@
 		18CB62A72247DF58009EB01E /* SS_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CB62A62247DF58009EB01E /* SS_Icon.png */; };
 		18CB62A92247E40A009EB01E /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62A82247E40A009EB01E /* ShowDetailsViewController.swift */; };
 		18CB62CD22480C9A009EB01E /* iOSChallange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62CB22480C9A009EB01E /* iOSChallange.xcdatamodeld */; };
-		18CB62E0224929D2009EB01E /* DataForFavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */; };
 		18CB62E222493490009EB01E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E122493490009EB01E /* CoreDataManager.swift */; };
 		18CB62E422494896009EB01E /* ShowListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E322494895009EB01E /* ShowListObject.swift */; };
 		18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */; };
 		18CB630E2249C5B7009EB01E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB630D2249C5B7009EB01E /* AppConstants.swift */; };
+		18CB6316224A77F6009EB01E /* DataOperationsFromLocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB6315224A77F6009EB01E /* DataOperationsFromLocalDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +39,11 @@
 		18CB62A62247DF58009EB01E /* SS_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SS_Icon.png; sourceTree = "<group>"; };
 		18CB62A82247E40A009EB01E /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
 		18CB62CC22480C9A009EB01E /* iOSChallange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSChallange.xcdatamodel; sourceTree = "<group>"; };
-		18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForFavoriteListViewController.swift; sourceTree = "<group>"; };
 		18CB62E122493490009EB01E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18CB62E322494895009EB01E /* ShowListObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListObject.swift; sourceTree = "<group>"; };
 		18CB62E9224978C1009EB01E /* ShowListAlertViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListAlertViewViewController.swift; sourceTree = "<group>"; };
 		18CB630D2249C5B7009EB01E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		18CB6315224A77F6009EB01E /* DataOperationsFromLocalDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataOperationsFromLocalDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				18CB62E322494895009EB01E /* ShowListObject.swift */,
-				18CB62DF224929D2009EB01E /* DataForFavoriteListViewController.swift */,
+				18CB6315224A77F6009EB01E /* DataOperationsFromLocalDB.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -225,11 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CB62E0224929D2009EB01E /* DataForFavoriteListViewController.swift in Sources */,
 				18CB62E422494896009EB01E /* ShowListObject.swift in Sources */,
 				18CB62EA224978C1009EB01E /* ShowListAlertViewViewController.swift in Sources */,
 				182D97C82240651600A8CC8C /* FavouriteShowsListViewController.swift in Sources */,
 				18CB62CD22480C9A009EB01E /* iOSChallange.xcdatamodeld in Sources */,
+				18CB6316224A77F6009EB01E /* DataOperationsFromLocalDB.swift in Sources */,
 				182D97C42240651600A8CC8C /* AppDelegate.swift in Sources */,
 				18CB62A522468463009EB01E /* ShowsDataModelMap.swift in Sources */,
 				183100DD2241A50C00C714FE /* NetworkService.swift in Sources */,

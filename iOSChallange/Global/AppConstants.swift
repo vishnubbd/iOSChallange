@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct GEN_STRINGS
 {
     static let SHOWURL = "http://api.tvmaze.com/show"

@@ -11,7 +11,9 @@ import UIKit
 
 class NetworkingService: NSObject, URLSessionDelegate {
     static let shared = NetworkingService()
-    
+/****************************************************************/
+ //   Function for calling the show list API and Making connection with Network
+/***************************************************************/
     func newList (completion: @escaping ( _ data: [MapShowListInfo]?,_ error: Error?) -> Void){
         guard let url = URL(string:GEN_STRINGS.SHOWURL) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -22,7 +24,7 @@ class NetworkingService: NSObject, URLSessionDelegate {
                     
             }
             do{
-               
+             // Use JSON decoder for mapping the Json response for Object
                 let decoder = JSONDecoder()
                 let showParseList = try decoder.decode([MapShowListInfo].self, from:
                     dataResponse) //Decode JSON Response Data
