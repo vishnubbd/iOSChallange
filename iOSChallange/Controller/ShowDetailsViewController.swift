@@ -24,7 +24,12 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
         self.addShowSummary()
         self.addNavigationRightButton()
     }
+    override func viewWillAppear(_ animated: Bool) {
+         navigationItem.title = showDetails?.name
+        let navBarColor = navigationController!.navigationBar
+        navBarColor.barTintColor = UIColor(red:  255/255.0, green: 0/255.0, blue: 0/255.0, alpha: 100.0/100.0)
 
+    }
     func addNavigationRightButton(){
         if( DataOperationsFromLocalDB.shared.checkItemInDB(favoriteShowId: showDetails!.id!)){
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: GEN_STRINGS.FAVOURITE_BTN, style: .plain, target: self, action: #selector(addDeleteFavoriteTapped))

@@ -23,7 +23,8 @@ class FavouriteShowsListViewController: UIViewController, UITableViewDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        let navBarColor = navigationController!.navigationBar
+        navBarColor.barTintColor = self.hexStringToUIColor(hex: "5A35F5")
         favoriteList = ShowListObject.sharedManager.getShowFavouriteList()
         self.tableView.reloadData()
     }

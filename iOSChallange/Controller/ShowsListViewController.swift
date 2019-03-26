@@ -21,6 +21,10 @@ class ShowsListViewController: UIViewController, UITableViewDelegate {
         self.loadData()
      
     }
+    override func viewWillAppear(_ animated: Bool) {
+        let navBarColor = navigationController!.navigationBar
+        navBarColor.barTintColor = self.hexStringToUIColor(hex: "5A35F5")
+    }
     
  //MARK: - Methods for Getting the Show ist data from API
     func loadData(){
