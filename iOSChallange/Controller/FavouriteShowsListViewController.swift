@@ -19,12 +19,13 @@ class FavouriteShowsListViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         //        NetworkingService.shared.newList();
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.estimatedRowHeight = 72.0
+        tableView.rowHeight = UITableView.automaticDimension
           tableView.register(UINib(nibName: "ShowDetailTableViewCell", bundle: nil), forCellReuseIdentifier: GEN_STRINGS.CELL_LABEL)
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        let navBarColor = navigationController!.navigationBar
-        navBarColor.barTintColor = self.hexStringToUIColor(hex: "5A35F5")
+        self.defaultNavigationItem(navigationBar: navigationController!.navigationBar)
         favoriteList = ShowListObject.sharedManager.getShowFavouriteList()
         self.tableView.reloadData()
     }
@@ -43,9 +44,6 @@ extension FavouriteShowsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         return GEN_STRINGS.FAV_LIST
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 57.5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GEN_STRINGS.CELL_LABEL, for: indexPath) as! ShowDetailTableViewCell

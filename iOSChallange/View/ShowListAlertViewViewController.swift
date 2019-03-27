@@ -50,4 +50,15 @@ extension UIViewController {
             alpha: CGFloat(1.0)
         )
     }
+    //MARK: - extension for navigation bar Size and Font family
+    func defaultNavigationItem(navigationBar:UINavigationBar){
+        navigationBar.barTintColor = self.hexStringToUIColor(hex: "5A35F5")
+        navigationBar.prefersLargeTitles = false
+    }
+    func largeTitleNavigationItem(navigationBar:UINavigationBar){
+        navigationBar.barTintColor = self.hexStringToUIColor(hex: "5AFFF5")
+        navigationBar.prefersLargeTitles = true
+        navigationBar.largeTitleTextAttributes =  [NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18) ??
+            UIFont.boldSystemFont(ofSize: 18) ]
+    }
 }

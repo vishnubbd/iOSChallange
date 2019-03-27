@@ -26,11 +26,8 @@
                             <constraint firstAttribute="height" constant="43.5" id="ORz-R9-AAA"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-sM-QUG">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-sM-QUG">
                         <rect key="frame" x="76" y="18" width="186" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="22" id="7bA-3a-AwD"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,6 +35,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="PnF-C4-xI4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8tq-IH-iHg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0Vb-sM-QUG" secondAttribute="bottom" constant="7" id="EC0-Ix-3YJ"/>
                     <constraint firstItem="PnF-C4-xI4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="LOC-Cf-2Hz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0Vb-sM-QUG" secondAttribute="trailing" constant="16" id="Puc-qN-kFA"/>
                     <constraint firstItem="0Vb-sM-QUG" firstAttribute="leading" secondItem="PnF-C4-xI4" secondAttribute="trailing" constant="16" id="SoJ-7B-FEV"/>

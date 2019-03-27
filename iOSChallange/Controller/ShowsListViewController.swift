@@ -18,12 +18,14 @@ class ShowsListViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
            tableView.register(UINib(nibName: "ShowDetailTableViewCell", bundle: nil), forCellReuseIdentifier: GEN_STRINGS.CELL_LABEL)
+        tableView.estimatedRowHeight = 72.0
+        tableView.rowHeight = UITableView.automaticDimension
         self.loadData()
      
     }
     override func viewWillAppear(_ animated: Bool) {
-        let navBarColor = navigationController!.navigationBar
-        navBarColor.barTintColor = self.hexStringToUIColor(hex: "5A35F5")
+        self.defaultNavigationItem(navigationBar: navigationController!.navigationBar)
+
     }
     
  //MARK: - Methods for Getting the Show ist data from API
@@ -74,10 +76,7 @@ extension ShowsListViewController: UITableViewDataSource {
         
         return GEN_STRINGS.SHOW_LIST
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 57.5
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GEN_STRINGS.CELL_LABEL, for: indexPath) as! ShowDetailTableViewCell
         

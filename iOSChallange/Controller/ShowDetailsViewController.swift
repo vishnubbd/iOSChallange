@@ -20,15 +20,16 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.largeTitleNavigationItem(navigationBar: navigationController!.navigationBar)
         self.addImage()
         self.addShowSummary()
         self.addNavigationRightButton()
     }
     override func viewWillAppear(_ animated: Bool) {
-         navigationItem.title = showDetails?.name
-        let navBarColor = navigationController!.navigationBar
-      navBarColor.barTintColor = self.hexStringToUIColor(hex: "5AFFF5")
 
+         navigationItem.title = showDetails?.name
+       
+       
     }
     func addNavigationRightButton(){
         if( DataOperationsFromLocalDB.shared.checkItemInDB(favoriteShowId: showDetails!.id!)){
