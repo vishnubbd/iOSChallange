@@ -8,14 +8,6 @@
 
 import UIKit
 
-class ShowListAlertViewViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-}
 //MARK: - Add UiAlertviewcontroller
 extension UIViewController {
         
@@ -58,7 +50,7 @@ extension UIViewController {
     func largeTitleNavigationItem(navigationBar:UINavigationBar){
         navigationBar.barTintColor = self.hexStringToUIColor(hex: "5AFFF5")
         navigationBar.prefersLargeTitles = true
-        navigationBar.largeTitleTextAttributes =  [NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 18) ??
+        navigationBar.largeTitleTextAttributes =  [NSAttributedString.Key.font: UIFont(name: GEN_STRINGS.FONT_FAMILY, size: 18) ??
             UIFont.boldSystemFont(ofSize: 18) ]
     }
 }

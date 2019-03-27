@@ -30,4 +30,5 @@ struct GEN_STRINGS
      static let CELL_LABEL = "LabelCell"
     static let SHOW_FAV_SEGUE = "ShowFavouriteSegue"
     static let SHOW_DETAIL_SEGUE = "ShowCounterSegue"
+    static let FONT_FAMILY = "Helvetica-Bold"
 }

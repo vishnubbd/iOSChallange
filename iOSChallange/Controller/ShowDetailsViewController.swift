@@ -74,29 +74,8 @@ class ShowDetailsViewController: UIViewController, WKNavigationDelegate{
 //MARK: - Add image in view with Image caching 
     func addImage(){
         showImage.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
-        if let cachedImage = imageMedCache.object(forKey: NSString(string: ((showDetails?.name)! + "Org"))) {
-            showImage.image = cachedImage
-        }
-        else
-        {
-            if showDetails?.image.original != ""
-            {
-                DispatchQueue.global(qos: .background).async {
-                    
-                    
-                    
-                    let url = URL(string:(self.showDetails?.image.original)!)
-                    if let data = try? Data(contentsOf: url!) {
-                        if let image = UIImage(data: data) {
-                            DispatchQueue.main.async {
-                                self.imageMedCache.setObject(image, forKey: NSString(string: ((self.showDetails?.name)! + "Org")))
-                                self.showImage.image = image
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        showImage.cacheImage(urlString:(self.showDetails?.image.original)!)
+    
     }
  //MARK: - Open the web url for TV Show
     @IBAction func openLiveShow(_ sender: Any) {
