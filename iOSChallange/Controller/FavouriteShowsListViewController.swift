@@ -51,8 +51,11 @@ extension FavouriteShowsListViewController: UITableViewDataSource {
         let selectedshowDetail = self.favoriteList[indexPath.row]
         cell.showNameLabel?.text = selectedshowDetail.name
         // Check Image caching, If image has not cached. Add code for chacing the same image. Object name is using for cachching key
-        cell.showImageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
-       cell.showImageView.cacheImage(urlString: selectedshowDetail.image.medium!)
+
+        let imageURL = selectedshowDetail.image.medium ?? ""
+          if !imageURL.isEmpty{
+        tableView.cacheImage(imageURL: imageURL, forCell: cell, atIndexPath: indexPath)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

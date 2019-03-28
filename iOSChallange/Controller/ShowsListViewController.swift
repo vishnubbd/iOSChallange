@@ -12,7 +12,7 @@ class ShowsListViewController: UIViewController, UITableViewDelegate {
     var showList:[MapShowListInfo] = []
     var selectedshowDetail:MapShowListInfo?
     
-    let imageCache = NSCache<NSString, UIImage>()
+  
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,11 +82,12 @@ extension ShowsListViewController: UITableViewDataSource {
         
         let selectedshowDetail = self.showList[indexPath.row]
         cell.showNameLabel?.text = selectedshowDetail.name
-        cell.showImageView?.image = UIImage(named:GEN_STRINGS.DEFAULT_IMG)
-        
+
         // Check Image caching, If image has not cached. Add code for chacing the same image. Object name is using for cachching key
-        
-        cell.showImageView.cacheImage(urlString: selectedshowDetail.image.medium!)
+        let imageURL = selectedshowDetail.image.medium ?? ""
+        if !imageURL.isEmpty{
+        tableView.cacheImage(imageURL: imageURL, forCell: cell, atIndexPath: indexPath)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -119,6 +120,7 @@ extension ShowsListViewController: UITableViewDataSource {
         }
         
     }
+  
     
 /****************************************************************/
     //  Router call: Controller for segue

@@ -21,7 +21,7 @@ class ShowListObject: NSObject {
                 print(error)
                 completion (nil)
             }else{
-            self.showList = data!
+            self.showList = data ?? []
             completion (data)
             }
         }

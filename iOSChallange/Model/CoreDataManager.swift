@@ -13,7 +13,7 @@ class CoreDataManager: NSObject {
     // MARK: - Core Data stack
    
 /****************************************************************/
-//   Core data manager- Defaut method for peristence.
+//   Core data manager- Defaut method for persistence.
 /***************************************************************/
     static let sharedManager = CoreDataManager()
    

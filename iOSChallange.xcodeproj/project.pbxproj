@@ -26,6 +26,7 @@
 		18CB631D224A8808009EB01E /* ShowDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB631B224A8808009EB01E /* ShowDetailTableViewCell.swift */; };
 		18CB631E224A8808009EB01E /* ShowDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CB631C224A8808009EB01E /* ShowDetailTableViewCell.xib */; };
 		18CB6320224A95C1009EB01E /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 18CB631F224A95C1009EB01E /* ReadMe.rtf */; };
+		18D0194D224D504700D0E1F5 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0194C224D504700D0E1F5 /* TableView+Extension.swift */; };
 		18F270F0224C1B0400EDB197 /* UiImageView+ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F270EF224C1B0400EDB197 /* UiImageView+ImageCaching.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		18CB631B224A8808009EB01E /* ShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18CB631C224A8808009EB01E /* ShowDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailTableViewCell.xib; sourceTree = "<group>"; };
 		18CB631F224A95C1009EB01E /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		18D0194C224D504700D0E1F5 /* TableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		18F270EF224C1B0400EDB197 /* UiImageView+ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiImageView+ImageCaching.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 		18F270F1224C216400EDB197 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				18D0194C224D504700D0E1F5 /* TableView+Extension.swift */,
 				18F270EF224C1B0400EDB197 /* UiImageView+ImageCaching.swift */,
 				18CB62E9224978C1009EB01E /* ViewController+Extension.swift */,
 			);
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CB631D224A8808009EB01E /* ShowDetailTableViewCell.swift in Sources */,
+				18D0194D224D504700D0E1F5 /* TableView+Extension.swift in Sources */,
 				18CB62E422494896009EB01E /* ShowListObject.swift in Sources */,
 				18CB62EA224978C1009EB01E /* ViewController+Extension.swift in Sources */,
 				182D97C82240651600A8CC8C /* FavouriteShowsListViewController.swift in Sources */,
