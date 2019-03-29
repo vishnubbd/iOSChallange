@@ -82,7 +82,7 @@ extension ShowsListViewController: UITableViewDataSource {
         
         let selectedshowDetail = self.showList[indexPath.row]
         cell.showNameLabel?.text = selectedshowDetail.name
-
+//        cell.showImageView.image = UIImage(named: GEN_STRINGS.DEFAULT_IMG)
         // Check Image caching, If image has not cached. Add code for chacing the same image. Object name is using for cachching key
         let imageURL = selectedshowDetail.image.medium ?? ""
         if !imageURL.isEmpty{

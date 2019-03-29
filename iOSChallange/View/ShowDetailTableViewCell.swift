@@ -23,4 +23,9 @@ class ShowDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        showImageView.image = UIImage(named: GEN_STRINGS.DEFAULT_IMG)
+    }
+    
 }

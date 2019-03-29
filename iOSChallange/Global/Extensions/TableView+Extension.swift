@@ -27,7 +27,7 @@ extension UITableView {
                         imageCache.setObject(imageToCache!, forKey: (imageURL as AnyObject) as! NSString)
           // Check whether the cell is visbible or not.  It’s important to check whether the cell is visible on screen before updating the image. Otherwise, the image will be reused on each cell while scrolling. The check is a performance saver and mandatory to implement. If the concerned cell is visible, then you just assign the image to cell image view and add it to the cache collection for later use.
                         if let updatedCell =  self?.cellForRow(at: indexPath) as? ShowDetailTableViewCell {
-                            updatedCell.showImageView.cacheImage(urlString: imageURL)
+ updatedCell.showImageView.cacheImage(urlString: imageURL)
                         }
                     }
                 }
