@@ -2,3 +2,6 @@
 language: swift
 osx_image: xcode10.3
 
+xcode_project: iOSChallange.xcodeproj #3
+xcode_scheme: iOSChallange #4
+xcode_sdk: iphonesimulator10.3 #5
